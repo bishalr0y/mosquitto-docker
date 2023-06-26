@@ -9,6 +9,7 @@ services:
         - 1883
       ports:
         - 1883:1883
+        - 9001:90001
       restart: unless-stopped
 
 networks:
