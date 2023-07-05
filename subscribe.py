@@ -1,9 +1,6 @@
 import paho.mqtt.client as mqtt
 import time
 
-# username = "mqtt_subcsriber"
-# password = "410laqyo3T9B5w3r"
-
 username = "username"
 password = "password"
 
