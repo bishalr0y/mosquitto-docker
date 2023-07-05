@@ -1,6 +1,12 @@
 import paho.mqtt.client as mqtt
 import time
 
+# username = "mqtt_subcsriber"
+# password = "410laqyo3T9B5w3r"
+
+username = "username"
+password = "password"
+
 def on_message(client, userdata, message):
     print("received message: " ,str(message.payload.decode("utf-8")))
 
@@ -10,6 +16,7 @@ mqttBrokerPort = 1883
 timeToLive = 60
 
 client = mqtt.Client("Smartphone")
+client.username_pw_set(username, password)
 client.connect(mqttBrokerHost, mqttBrokerPort, timeToLive) 
 
 client.loop_start()
